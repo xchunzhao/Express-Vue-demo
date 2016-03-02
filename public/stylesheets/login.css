@@ -1,0 +1,108 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.login_bg {
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#d8dff1), to(#d9c4cb));
+    height: 100%;
+    vertical-align: middle;
+    min-width: 1000px;
+}
+
+.login_ck {
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 0 auto;
+    border-radius: 5px;
+    width: 450px;
+    position: relative;
+    top: 30%;
+    height: 335px;
+}
+
+.login_h {
+    font-size: 18px;
+    font-family: "Microsoft YaHei UI";
+    text-align: center;
+    padding: 20px 0;
+}
+
+.login_hr {
+    height: 1px;
+    background-color: #dddddd
+}
+
+.float {
+    float: left
+}
+
+.key {
+    width: 135px;
+    text-align: right;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    font-family: Arial
+}
+
+.val {
+    border: 1px solid #ccc;
+}
+
+.sl {
+    width: 242px;
+    outline: none;
+    border: none;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.content {
+    padding-top: 35px;
+    padding-bottom: 10px;
+}
+
+.fix {
+    padding-bottom: 20px;
+}
+
+.fix:after {
+    display: block;
+    content: "clear";
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+button {
+    background-color: #e98c7c;
+    border-radius: 3px;
+    border-width: 0;
+    height: 40px;
+    width: 225px;
+    padding: 10px 0;
+    font-size: 14px;
+    color: white;
+    margin-left: 145px;
+}
+
+.login_bt {
+    padding-top: 0px;
+    padding-bottom: 45px;
+}
+
+input {
+    width: 242px;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    height: 30px;
+}
+
+.error {
+    font-size: 16px;
+    color: red;
+    text-align: center;
+}

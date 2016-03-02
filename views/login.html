@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='/stylesheets/login.css'/>
+</head>
+<body>
+<div id="app" class="login_bg">
+    <div class="login_ck">
+        <div class="login_h">demo1</div>
+        <div class="login_hr"></div>
+        <div class="error">
+            {{msg}}
+        </div>
+        <div class="content">
+            <div class="fix">
+                <div class="float key">用户:</div>
+                <div class="float val"><input type="text" v-model="dataPost.username"></div>
+            </div>
+            <div class="fix">
+                <div class="float key">密码:</div>
+                <div class="float val"><input type="password" v-model="dataPost.password"></div>
+            </div>
+        </div>
+        <div class="login_bt">
+            <button @click="login">登录</button>
+        </div>
+    </div>
+</div>
+<script src="/javascript/vue.min.js"></script>
+<script src="javascript/jquery-1.9.1.min.js"></script>
+<script src="/javascript/cookie.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            msg: '',
+            dataPost : {
+                username: '',
+                password: '',
+            }
+        },
+        methods: {
+            login: function () {
+                var self = this;
+                var url = "/login";
+                $.ajax({
+                    type: 'post',
+                    url: url,
+                    data: JSON.stringify(this.dataPost),
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    success: function (msg) {
+                        if (msg.code === 302) {
+                            self.msg=msg.msg;
+                        }
+                        if (msg.code === 200) {
+                            self.msg = msg.msg;
+                        }
+                    }
+                })
+            }
+        }
+    })
+</script>
+</body>
+</html>
